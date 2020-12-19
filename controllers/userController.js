@@ -22,17 +22,6 @@ exports.loginUser = async (req, res) => {
     }
 }
 
-// exports.updateUser = async (req, res) => {
-//     const updates = Object.keys(req.body);
-//     try {
-//         // const author = await Author.findOne(req.body.email);
-//         updates.forEach(update => req.user[update] = req.body[update]);
-//         await req.user.save();
-//         res.send(req.user)
-//     } catch (e) {
-//         res.status(400).send(e)
-//     }
-// }
 
 exports.logoutUser = async (req, res) => {
     try {

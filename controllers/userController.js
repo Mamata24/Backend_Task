@@ -14,7 +14,7 @@ exports.signUpUser = async (req, res) => {
 exports.loginUser = async (req, res) => {
     try {
         const user = await User.findByCredentials(req.body.username, req.body.password)
-        const token = await author.generateAuthToken()
+        const token = await user.generateAuthToken()
 
         res.send({ user, token })
     } catch (e) {
